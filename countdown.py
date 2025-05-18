@@ -1,12 +1,13 @@
 # countdown program
 import time
 
-for x in reversed(range(1,11)):
-    print(x)
+timer = int(input("Set countdown ( seconds ): "))
+
+for x in range(timer, 0, -1):
+    seconds = x % 60
+    minutes = int( x / 60 ) % 60
+    hours = int( x / 3600 )
+    print(f"{hours:02}:{minutes:02}:{seconds:02}", end="\r")
     time.sleep(1)
 
-print("HAPPY NEW YEAR !!")
-
-# improvement plans
-# font ng text tapos interface siguro ??
-# DAPAT MALAKI TALAGA FR
+print("DONEEEEEEEEEEEE!!!!!!!!!!!")
